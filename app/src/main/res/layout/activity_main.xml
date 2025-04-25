@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:padding="24dp">
+
+    <!-- Texte "Bienvenue dans" -->
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bienvenue dans"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:fontFamily="@font/mulish"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp" />
+
+    <!-- Titre de l'app -->
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MathsProfs+"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@color/pink"
+        android:fontFamily="@font/mulish"
+        android:layout_below="@id/welcomeText"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true" />
+
+    <!-- Bouton 1 -->
+    <Button
+        android:id="@+id/btnFiches"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appTitle"
+        android:layout_marginTop="48dp"
+        android:layout_centerHorizontal="true"
+        android:text="Fiches pédagogiques"
+        android:textColor="@android:color/white"
+        android:background="@drawable/rounded_button"
+        android:fontFamily="@font/mulish"
+        android:padding="12dp" />
+
+    <!-- Bouton 2 -->
+    <Button
+        android:id="@+id/btnSeries"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnFiches"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:text="Séries d'exercices"
+        android:textColor="@android:color/white"
+        android:background="@drawable/rounded_button"
+        android:fontFamily="@font/mulish"
+        android:padding="12dp" />
+
+    <!-- Bouton 3 -->
+    <Button
+        android:id="@+id/btnGeogebra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnSeries"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:text="Activités interactives Geogebra"
+        android:textColor="@android:color/white"
+        android:background="@drawable/rounded_button"
+        android:fontFamily="@font/mulish"
+        android:padding="12dp" />
+
+    <!-- Bouton 4 -->
+    <Button
+        android:id="@+id/btnAPropos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnGeogebra"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:text="À propos de PROFSMATHS+"
+        android:textColor="@android:color/white"
+        android:background="@drawable/rounded_button"
+        android:fontFamily="@font/mulish"
+        android:padding="12dp" />
+
+</RelativeLayout>
