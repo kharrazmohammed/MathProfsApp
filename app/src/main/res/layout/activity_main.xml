@@ -39,10 +39,10 @@
         android:layout_centerHorizontal="true"
         android:background="@drawable/rounded_button"
         android:fontFamily="@font/mulishbold"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:text="Fiches pédagogiques"
         android:textColor="@color/white"
-        android:padding="12dp" />
+        android:padding="10dp" />
 
     <Button
         android:id="@+id/btnSeries"
@@ -54,9 +54,9 @@
         android:text="Séries d'exercices"
         android:background="@drawable/rounded_button"
         android:fontFamily="@font/mulishbold"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:textColor="@color/white"
-        android:padding="12dp" />
+        android:padding="10dp" />
 
     <Button
         android:id="@+id/btnGeogebra"
@@ -68,9 +68,9 @@
         android:text="Activités interactives Geogebra"
         android:background="@drawable/rounded_button"
         android:fontFamily="@font/mulishbold"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:textColor="@color/white"
-        android:padding="12dp" />
+        android:padding="10dp" />
 
     <Button
         android:id="@+id/btnAPropos"
@@ -82,8 +82,8 @@
         android:text="À propos de PROFSMATHS+"
         android:background="@drawable/rounded_button"
         android:fontFamily="@font/mulishbold"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:textColor="@color/white"
-        android:padding="12dp" />
+        android:padding="10dp" />
 
 </RelativeLayout>

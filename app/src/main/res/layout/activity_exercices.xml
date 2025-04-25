@@ -1,0 +1,113 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:padding="16dp">
+
+    <!-- Bouton Retour -->
+    <TextView
+        android:id="@+id/tvRetour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/mulishblack"
+        android:text="◀ Retour"
+        android:textColor="#1E2D33"
+        android:textSize="14sp"
+        android:padding="4dp"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <!-- Titre -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fiches pédagogiques"
+        android:textSize="26sp"
+        android:fontFamily="@font/mulishbold"
+        android:textStyle="bold"
+        android:textColor="#1E2D33"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/etSearch"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Rechercher des Séries d'exercices"
+        android:fontFamily="@font/mulishregular"
+        android:textSize="16sp"
+        android:textColor="@color/searchhint"
+        android:textColorHint="@color/searchhint"
+        android:drawableStart="@drawable/searchicon"
+        android:drawablePadding="12dp"
+        android:background="@drawable/bg_search_rounded"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:layout_marginBottom="16dp" />
+
+
+    <!-- ChipGroup -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:singleSelection="true"
+            app:chipSpacing="8dp"
+            app:singleLine="false">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip1AC"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="1 AC"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:backgroundTint="@color/pink"
+                android:textColor="@color/white"
+                android:fontFamily="@font/mulish"
+                android:checkable="true"
+                android:checked="true" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip2AC"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="2 AC"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:fontFamily="@font/mulish"
+                android:checkable="true" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip3AC"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="3 AC"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:fontFamily="@font/mulish"
+                android:checkable="true" />
+
+        </com.google.android.material.chip.ChipGroup>
+    </LinearLayout>
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFiches"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false" />
+</LinearLayout>

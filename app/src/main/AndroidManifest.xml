@@ -14,9 +14,11 @@
         android:theme="@style/Theme.Mathprofs"
         tools:targetApi="31">
         <activity
-            android:name=".activities.about"
+            android:name=".activities.exercicesActivity"
             android:exported="false" />
-        <!-- Activité de démarrage : Splashscreen -->
+        <activity
+            android:name=".activities.about"
+            android:exported="false" /> <!-- Activité de démarrage : Splashscreen -->
         <activity
             android:name=".activities.Splashscreen"
             android:exported="true">
