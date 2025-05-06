@@ -6,7 +6,6 @@ import android.content.Intent
 import com.example.mathprofs.R
 import android.os.Bundle
 import android.widget.Button
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 
@@ -21,22 +20,22 @@ class MainActivity : AppCompatActivity() {
 
 
         btnAPropos.setOnClickListener {
-            val intent=Intent(this,about::class.java)
+            val intent=Intent(this,About::class.java)
             startActivity(intent)
             finish()
         }
         btnGeogebra.setOnClickListener {
-            val intent=Intent(this,about::class.java)
+            val intent=Intent(this,ActivitiesActivity::class.java)
             startActivity(intent)
             finish()
         }
         btnFiches.setOnClickListener {
-            val intent=Intent(this,about::class.java)
+            val intent=Intent(this,FichesActivity::class.java)
             startActivity(intent)
             finish()
         }
         btnSeries.setOnClickListener {
-            val intent=Intent(this,exercicesActivity::class.java)
+            val intent=Intent(this,ExercicesActivity::class.java)
             startActivity(intent)
             finish()
         }

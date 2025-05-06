@@ -1,104 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
     android:padding="24dp">
 
-    <TextView
-        android:id="@+id/btnBack"
+    <!-- Bloc Retour -->
+    <LinearLayout
+        android:id="@+id/retour"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="12dp"
-        android:fontFamily="@font/mulishblack"
-        android:text="◀ Retour"
-        android:textColor="#1E2D33"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
 
-    <TextView
-        android:id="@+id/titre"
+        <ImageButton
+            android:id="@+id/btnBackabout"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_chevron_left"
+            android:contentDescription="Retour"
+            android:padding="4dp"/>
+
+        <TextView
+            android:id="@+id/tvRetour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Retour"
+            android:textColor="#1E2D33"
+            android:textSize="18sp"
+            android:fontFamily="@font/mulishmedium"
+            android:paddingStart="4dp"/>
+    </LinearLayout>
+
+    <!-- Bloc Titre + Nom Application -->
+    <LinearLayout
+        android:id="@+id/titreBloc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/mulishbold"
-        android:text="À propos de"
-        android:textColor="#1E2D33"
-        android:textSize="26sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnBack" />
+        android:orientation="vertical"
+        android:layout_below="@id/retour"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp">
 
-    <TextView
-        android:id="@+id/appName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/mulishextrabold"
-        android:text="MathsProfs+"
-        android:textColor="#FF197D"
-        android:textSize="36sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/titre" />
+        <!-- Titre -->
+        <TextView
+            android:id="@+id/titre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulishbold"
+            android:text="À propos de"
+            android:textColor="#1E2D33"
+            android:textSize="26sp" />
 
+        <!-- Nom de l'app -->
+        <TextView
+            android:id="@+id/appName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/mulishextrabold"
+            android:text="MathsProfs+"
+            android:textColor="#FF197D"
+            android:textSize="36sp" />
+    </LinearLayout>
+
+
+    <!-- Description -->
     <TextView
         android:id="@+id/description"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/titreBloc"
+        android:fontFamily="@font/mulishmedium"
         android:text="MathsProfs+ est une application mobile destinée aux professeurs de mathématiques du collège.\nElle permet d'accéder facilement à des ressources pédagogiques utiles :"
         android:textColor="#000000"
-        android:textSize="18sp"
-        android:fontFamily="@font/mulishmedium"
-        android:lineSpacingExtra="4dp"
-        app:layout_constraintTop_toBottomOf="@id/appName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
+        android:textSize="16sp"
+        android:lineSpacingExtra="4dp" />
 
+    <!-- Liste -->
     <TextView
         android:id="@+id/liste"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:layout_below="@id/description"
         android:fontFamily="@font/mulishmedium"
-        android:lineSpacingExtra="4dp"
         android:text="• fiches pédagogiques\n• résumés de cours\n• series exercices\n• activités interactives."
         android:textColor="#000000"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/description" />
+        android:textSize="16sp"
+        android:lineSpacingExtra="4dp" />
 
+    <!-- Objectif -->
     <TextView
         android:id="@+id/objectif"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/liste"
+        android:fontFamily="@font/mulishmedium"
         android:text="Conçue pour faciliter la préparation des cours et enrichir la pratique enseignante."
         android:textColor="#000000"
-        android:textSize="18sp"
-        android:fontFamily="@font/mulishmedium"
-        android:lineSpacingExtra="4dp"
-        app:layout_constraintTop_toBottomOf="@id/liste"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
+        android:textSize="16sp"
+        android:lineSpacingExtra="4dp" />
 
+    <!-- Signature -->
     <TextView
         android:id="@+id/signature"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_below="@id/objectif"
+        android:fontFamily="@font/mulishmedium"
         android:text="Réalisée par :\nMOHAMMED KHARAZ\nProfesseur de mathématiques stagiaire – CRMEF Safi (2025)"
         android:textColor="#000000"
-        android:textSize="18sp"
-        android:fontFamily="@font/mulishmedium"
-        android:lineSpacingExtra="4dp"
-        app:layout_constraintTop_toBottomOf="@id/objectif"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="24dp"/>
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:lineSpacingExtra="4dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

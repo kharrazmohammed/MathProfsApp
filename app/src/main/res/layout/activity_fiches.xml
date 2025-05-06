@@ -6,7 +6,9 @@
     android:background="@android:color/white"
     android:padding="16dp">
 
+    <!-- Barre de retour -->
     <LinearLayout
+        android:id="@+id/layoutRetourSeriesExo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -16,7 +18,7 @@
         android:gravity="center_vertical">
 
         <ImageButton
-            android:id="@+id/btnBackexo"
+            android:id="@+id/btnRetourSeriesExo"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:background="@android:color/transparent"
@@ -25,7 +27,7 @@
             android:padding="4dp"/>
 
         <TextView
-            android:id="@+id/tvRetour"
+            android:id="@+id/tvRetourSeriesExo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Retour"
@@ -35,11 +37,12 @@
             android:paddingStart="4dp" />
     </LinearLayout>
 
-
+    <!-- Titre principal -->
     <TextView
+        android:id="@+id/tvTitreSeriesExo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Fiches pédagogiques"
+        android:text="Séries d'exercices"
         android:textSize="26sp"
         android:fontFamily="@font/mulishbold"
         android:textStyle="bold"
@@ -47,11 +50,12 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="16dp" />
 
+    <!-- Champ de recherche -->
     <EditText
-        android:id="@+id/etSearch"
+        android:id="@+id/etRechercheSeriesExo"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:hint="Rechercher des Fiches pédagogiques"
+        android:hint="Rechercher des Séries d'exercices"
         android:fontFamily="@font/mulishregular"
         android:textSize="16sp"
         android:textColor="@color/searchhint"
@@ -63,23 +67,25 @@
         android:paddingEnd="12dp"
         android:layout_marginBottom="16dp" />
 
-
+    <!-- Filtres par niveau -->
     <LinearLayout
+        android:id="@+id/layoutChipsNiveauxExo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_horizontal">
 
         <com.google.android.material.chip.ChipGroup
-            android:id="@+id/chipGroup"
+            android:id="@+id/chipGroupNiveauxExo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             app:singleSelection="true"
             app:chipSpacing="8dp"
             app:singleLine="false">
+
             <com.google.android.material.chip.Chip
-                android:id="@+id/chipall"
+                android:id="@+id/chipNiveauTous"
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:text="Tous"
@@ -87,11 +93,10 @@
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:fontFamily="@font/mulish"
-                android:checkable="true"
-           />
+                android:checkable="true" />
 
             <com.google.android.material.chip.Chip
-                android:id="@+id/chip1AC"
+                android:id="@+id/chipNiveau1AC"
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:text="1AC"
@@ -99,37 +104,36 @@
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:fontFamily="@font/mulish"
-                android:checkable="true"
-
-                />
+                android:checkable="true" />
 
             <com.google.android.material.chip.Chip
-                android:id="@+id/chip2AC"
+                android:id="@+id/chipNiveau2AC"
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:text="2AC"
                 android:gravity="center"
                 android:textAlignment="center"
+                android:textColor="@color/white"
                 android:fontFamily="@font/mulish"
-                android:checkable="true"
-                />
+                android:checkable="true" />
 
             <com.google.android.material.chip.Chip
-                android:id="@+id/chip3AC"
+                android:id="@+id/chipNiveau3AC"
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:text="3AC"
                 android:gravity="center"
                 android:textAlignment="center"
+                android:textColor="@color/white"
                 android:fontFamily="@font/mulish"
-                android:checkable="true"
-                />
+                android:checkable="true" />
 
         </com.google.android.material.chip.ChipGroup>
     </LinearLayout>
 
+    <!-- Liste des fiches -->
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvFiches"
+        android:id="@+id/rvSeriesExercices"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
